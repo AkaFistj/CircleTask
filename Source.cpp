@@ -31,7 +31,7 @@ int main()
 							if (x < 0 && y < 0)
 								cout << endl << "You have a shoot : Blue M3!" << endl;
 							else {
-								if (y >= - fabs(x) && x>0)
+								if (y <= - fabs(x) && x>0)
 									cout << endl << "You have a shoot : Pink M2!" << endl;
 								else {
 									cout << endl << "You have a shoot : White M4!" << endl;
@@ -40,6 +40,21 @@ int main()
 						}
 					}
 				}
+
+	if (x == 0 && y == 0)
+	cout << endl << "This is Zero" << endl;
+	if (x * x + y * y > 1) // окружность
+	cout << endl << "You loose, get серый M5" << endl;
+	if (x * x + y * y > 1 && y>=x*x) // парабола
+	cout << endl << "You WIN, get зеленый M1" << endl;
+	if (x * x + y * y > 1 && y <= -fabs(x) && x > 0) // парабола
+	cout << endl << "You WIN, get розвый M2" << endl;
+	if (x * x + y * y > 1 && x < 0 && y < 0)
+	cout << endl << "You have a shoot : синий M3!" << endl;
+	// Белая зона
+	if (x * x + y * y > 1 && (x<0 && y<x*x) || x * x + y * y < 1 && (x > 0 && y > x * x) || x * x + y * y < 1 && (x > 0 && y > - fabs (x)))
+	cout << endl << "You have a shoot : белый M4!" << endl;
+
 				system("pause");
 				return 0;
 			}
