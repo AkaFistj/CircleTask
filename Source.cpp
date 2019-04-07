@@ -31,7 +31,7 @@ int main()
 							if (x < 0 && y < 0)
 								cout << endl << "You have a shoot : Blue M3!" << endl;
 							else {
-								if (y = -x && x > 0)
+								if (y >= - fabs(x) && x>0)
 									cout << endl << "You have a shoot : Pink M2!" << endl;
 								else {
 									cout << endl << "You have a shoot : White M4!" << endl;
